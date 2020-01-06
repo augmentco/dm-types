@@ -83,7 +83,7 @@ module DataMapper
             delete_at replace fill clear
             slice! reverse! rotate! compact! flatten! uniq!
             collect! map! sort! sort_by! reject! delete_if!
-            select! shuffle!
+            delete_if select! shuffle!
           }.select { |meth| ::Array.instance_methods.any? { |m| m.to_s == meth } },
 
           ::Hash => %w{
